@@ -12,6 +12,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  background-color: #cccccc;
+
 }
 
 a {
@@ -24,11 +26,12 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  
+  /* place-items: center;
+   */
+   background-color: #cccccc;
+ 
+ margin: auto;
 }
 
 h1 {
@@ -58,7 +61,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #cccccc;
   }
   a:hover {
     color: #747bff;
