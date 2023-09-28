@@ -1,0 +1,16 @@
+/* src/components/Hero.css */
+.hero {
+    background-color: #333; /* Set your desired background color */
+    color: #fff; /* Set text color */
+    padding: 100px; /* Adjust padding as needed */
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 36px; /* Set font size for the title */
+  }
+  
+  .hero p {
+    font-size: 18px; /* Set font size for the subtitle */
+  }
+  
