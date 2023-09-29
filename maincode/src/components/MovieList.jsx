@@ -12,10 +12,14 @@ const MoviesList = () => {
       .then(response => response.json())
       .then(data => {
         setMovies(data.results);
-        console.log(data.results);
       })
       .catch(error => console.error('Error fetching movies:', error));
   }, []);
+
+  const getImageUrl = (path) => {
+    const BASE_IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
+    return `${BASE_IMAGE_URL}${path}`;
+  };
 
   return (
     <div>
@@ -26,7 +30,7 @@ const MoviesList = () => {
             key={movie.id}
             title={movie.title}
             overview={movie.overview}
-            backdrop_path={movie.backdrop_path}
+            imageUrl={getImageUrl(movie.poster_path)} // Passa a URL da imagem
           />
         ))}
       </div>
@@ -35,3 +39,4 @@ const MoviesList = () => {
 };
 
 export default MoviesList;
+
