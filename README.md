@@ -48,7 +48,7 @@ Don’t know what to watch? Come to our website where you can browse a large col
 
 ## Usage
 
-[Provide usage examples or instructions on how to use our application.]
+Provide usage examples or instructions on how to use our application
 
 ## Methodology
 
