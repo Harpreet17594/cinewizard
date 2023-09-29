@@ -1,6 +1,8 @@
 /* src/components/Hero.css */
-.hero {
-    background-color: #333; /* Set your desired background color */
+
+  .hero {
+    background-image: url('../components/Picture1.jpg'); /* Adjust the path as needed */
+    background-size: cover; /* Adjust background size if necessary */
     color: #fff; /* Set text color */
     padding: 100px; /* Adjust padding as needed */
     text-align: center;
