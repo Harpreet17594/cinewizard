@@ -14,12 +14,12 @@ const movies = [
   {
     title: 'Movie 2',
     description: 'Description',
-    imageUrl: 'URL_IMAGE_MOVIE1',
+    imageUrl: 'URL_IMAGE_MOVIE2',
   },
   {
     title: 'Movie 3',
     description: 'Description',
-    imageUrl: 'URL_IMAGE_MOVIE2',
+    imageUrl: 'URL_IMAGE_MOVIE3',
   },
 ];
 
