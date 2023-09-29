@@ -1,22 +1,13 @@
 import React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import './movieCard.css';
 
-const MovieCard = ({ title, overview }) => {
-    return (
-      <Card>
-        <CardContent>
-          <Typography variant="h5" component="div">
-            {title}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {overview}
-          </Typography>
-        </CardContent>
-      </Card>
-    );
-  };
-  
-  export default MovieCard;
+const MovieCard = ({ title, overview, imageUrl }) => {
+  return (
+    <div style={{ border: '1px solid #ccc', margin: '10px', padding: '10px' }}>
+      <img src={imageUrl} alt={title} style={{ maxWidth: '100%' }} />
+      <h2>{title}</h2>
+      <p>{overview}</p>
+    </div>
+  );
+};
+
+export default MovieCard;
