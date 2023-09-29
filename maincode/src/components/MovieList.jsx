@@ -12,6 +12,7 @@ const MoviesList = () => {
       .then(response => response.json())
       .then(data => {
         setMovies(data.results);
+        console.log(data.results);
       })
       .catch(error => console.error('Error fetching movies:', error));
   }, []);
@@ -25,6 +26,7 @@ const MoviesList = () => {
             key={movie.id}
             title={movie.title}
             overview={movie.overview}
+            backdrop_path={movie.backdrop_path}
           />
         ))}
       </div>
