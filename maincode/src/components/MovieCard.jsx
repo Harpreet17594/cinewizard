@@ -11,6 +11,11 @@ const MovieCard = ({ title, overview ,backdrop_path}) => {
       <div className='row'>
       <div className='col-md-4 stylecard'>
       <Card>
+      <CardMedia
+        sx={{ height: 140 }}
+        image= {`https://image.tmdb.org/t/p/w500/${backdrop_path}`}
+        title="green iguana"
+      />
         <CardContent>
           <Typography variant="h5" component="div">
             {title}
@@ -18,10 +23,6 @@ const MovieCard = ({ title, overview ,backdrop_path}) => {
           <Typography variant="body2" color="text.secondary">
             {overview}
           </Typography>
-          <CardMedia>
-            {/* <img src= alt="loading..." height={300} width={300} /> */}
-            {backdrop_path}
-          </CardMedia>
         </CardContent>
       </Card>
       </div>  
