@@ -18,10 +18,10 @@ return(
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav stylefont">
-        {/* <Link to="/home" className="nav-link">Home</Link>
+        <Link to="/home" className="nav-link">Home</Link>
         <Link to="/movies" className="nav-link">Movies</Link>
         <Link to="/tv-shows" className="nav-link">TV Shows</Link>
-        <Link to="/watchlist" className="nav-link">WatchList</Link> */}
+        <Link to="/watchlist" className="nav-link">WatchList</Link>
         <li class="nav-item dropdown">
       
         <form class="d-flex" role="search">
