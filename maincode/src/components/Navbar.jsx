@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './navbar.css';
 import cinewizardlogo from '../assets/images/cinewizardlogo.png';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 function Navbar(){
 return(
@@ -17,21 +18,10 @@ return(
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav stylefont">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"> 
-          Home
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="#">Movies</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">TV Shows</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Wishlist &nbsp;&nbsp;<span class='badge badge-warning' id='lblCartCount'> 5 </span></a>
-        
-        </li>
+        <Link to="/home" className="nav-link">Home</Link>
+        <Link to="/movies" className="nav-link">Movies</Link>
+        <Link to="/tv-shows" className="nav-link">TV Shows</Link>
+        <Link to="/watchlist" className="nav-link">WatchList</Link>
         <li class="nav-item dropdown">
       
         <form class="d-flex" role="search">
