@@ -1,6 +1,7 @@
 .stylefont{
   font-family: 'Barriecito', cursive;
 }
+
 .badge {
     padding-left: 9px;
     padding-right: 9px;
@@ -13,6 +14,7 @@
   .badge-warning[href] {
     background-color: #c67605;
   }
+  
   #lblCartCount {
       font-size: 12px;
       background: #ff0000;

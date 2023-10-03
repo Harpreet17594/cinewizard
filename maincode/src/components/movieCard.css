@@ -1,8 +1,19 @@
 .movie-card {
-    margin-bottom: 20px;
-    max-width: 300px;
+    width: 250px;
+    height: 150px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 .stylecard{
     float: left;
     border-radius: 20px;
 }
+
+.card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 100px;
+  }
