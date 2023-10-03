@@ -7,26 +7,26 @@ function Navbar(){
 return(
   <>
     {/* navbar code */}
-    <nav class="navbar navbar-expand-lg bg-warning">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <nav className="navbar navbar-expand-lg bg-warning">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="#">
     <img src={cinewizardlogo} alt="Loading Logo :)"  height={50} width={50}/>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon">
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon">
       </span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav stylefont">
+    <div className="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul className="navbar-nav stylefont">
         <Link to="/home" className="nav-link">Home</Link>
         <Link to="/movies" className="nav-link">Movies</Link>
         <Link to="/tv-shows" className="nav-link">TV Shows</Link>
         <Link to="/watchlist" className="nav-link">WatchList</Link>
-        <li class="nav-item dropdown">
+        <li className="nav-item dropdown">
       
-        <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-      <button class="btn btn-outline-success" type="submit">Search</button>
+        <form className="d-flex" role="search">
+      <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+      <button className="btn btn-outline-success" type="submit">Search</button>
     </form>
     
         </li>
