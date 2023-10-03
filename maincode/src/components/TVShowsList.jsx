@@ -1,9 +1,9 @@
-// TVShowsList.jsx
 import React, { useState, useEffect } from 'react';
-import MovieCard from './MovieCard'; // Make sure to adjust the import path
+import MovieCard from './MovieCard'; 
 
 const TVShowsList = () => {
   const [tvShows, setTVShows] = useState([]);
+  const [watchlist, setWatchlist] = useState([]);
 
   useEffect(() => {
     const API_KEY = 'b2ceb41d1b13c59c04358418f87cecae';
@@ -18,6 +18,17 @@ const TVShowsList = () => {
       .catch(error => console.error('Error fetching TV shows:', error));
   }, []);
 
+  const addToWatchlist = (tvShow) => {
+    // Add Watchlist
+    setWatchlist([...watchlist, tvShow]);
+  };
+
+  const removeFromWatchlist = (tvShow) => {
+    // Remove Watchlist
+    const updatedWatchlist = watchlist.filter((item) => item.id !== tvShow.id);
+    setWatchlist(updatedWatchlist);
+  };
+
   return (
     <div>
       <h1>Popular TV-Shows</h1>
@@ -25,9 +36,13 @@ const TVShowsList = () => {
         {tvShows.map(item => (
           <MovieCard
             key={item.id}
-            title={item.title || item.name} // Title can be either "title" or "name" depending on the type
+            title={item.title || item.name} 
             overview={item.overview}
             backdrop_path={item.backdrop_path}
+            onAddToWatchlist={() => addToWatchlist(item)}
+            onRemoveFromWatchlist={() => removeFromWatchlist(item)}
+            isAdded={watchlist.some((watchlistItem) => watchlistItem.id === item.id)}
+            category="TVShows" 
           />
         ))}
       </div>
@@ -36,3 +51,5 @@ const TVShowsList = () => {
 };
 
 export default TVShowsList;
+
+

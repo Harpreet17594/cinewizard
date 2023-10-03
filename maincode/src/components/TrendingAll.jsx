@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import MovieCard from './MovieCard'; // Make sure to adjust the import path
+import PropTypes from 'prop-types'; // Importe PropTypes
 
-const trendingAll = () => {
+import MovieCard from './MovieCard';
+
+const TrendingAll = ({ showButtons }) => {
   const [trending, setTrending] = useState([]);
+  const [watchlist, setWatchlist] = useState([]); // State for the watchlist
 
   useEffect(() => {
     const API_KEY = 'b2ceb41d1b13c59c04358418f87cecae';
@@ -19,6 +22,17 @@ const trendingAll = () => {
       .catch(error => console.error('Error fetching trending content:', error));
   }, []);
 
+  const addToWatchlist = (item) => {
+    // Add the item to the watchlist
+    setWatchlist([...watchlist, item]);
+  };
+
+  const removeFromWatchlist = (item) => {
+    // Remove the item from the watchlist
+    const updatedWatchlist = watchlist.filter(watchlistItem => watchlistItem.id !== item.id);
+    setWatchlist(updatedWatchlist);
+  };
+
   return (
     <div>
       <h1>Trending Movies and TV Shows</h1>
@@ -26,9 +40,12 @@ const trendingAll = () => {
         {trending.map(item => (
           <MovieCard
             key={item.id}
-            title={item.title || item.name} // Title can be either "title" or "name" depending on the type
+            title={item.title || item.name}
             overview={item.overview}
             backdrop_path={item.backdrop_path}
+            showButtons={showButtons}
+            onAddToWatchlist={() => addToWatchlist(item)}
+            onRemoveFromWatchlist={() => removeFromWatchlist(item)}
           />
         ))}
       </div>
@@ -36,5 +53,13 @@ const trendingAll = () => {
   );
 };
 
-export default trendingAll;
+// Define PropTypes para o componente
+TrendingAll.propTypes = {
+  showButtons: PropTypes.any, // Substitua 'any' pelo tipo de prop correto, se aplicável.
+};
+
+export default TrendingAll;
+
+
+
 
