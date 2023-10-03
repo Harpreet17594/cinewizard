@@ -7,9 +7,6 @@ import './movieCard.css';
 
 const MovieCard = ({ title, overview ,backdrop_path}) => {
     return (
-      <div className='container-fluid'>
-      <div className='row'>
-      <div className='col-md-4 stylecard'>
       <Card>
       <CardMedia
         sx={{ height: 140 }}
@@ -25,9 +22,6 @@ const MovieCard = ({ title, overview ,backdrop_path}) => {
           </Typography>
         </CardContent>
       </Card>
-      </div>  
-      </div> 
-      </div>
     );
   };
   
