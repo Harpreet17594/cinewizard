@@ -22,12 +22,14 @@ return(
         <Link to="/movies" className="nav-link">Movies</Link>
         <Link to="/tv-shows" className="nav-link">TV Shows</Link>
         <Link to="/watchlist" className="nav-link">WatchList</Link>
+        <Link to="/searchmovie" className="nav-link">Searchmovie</Link>
+
         <li class="nav-item dropdown">
       
-        <form class="d-flex" role="search">
+        {/* <form class="d-flex" role="search" action="/Searchmovie.jsx" method="post">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
       <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
+    </form> */}
     
         </li>
       </ul>
