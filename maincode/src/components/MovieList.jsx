@@ -15,7 +15,8 @@ const MoviesList = () => {
       .then(response => response.json())
       .then(data => {
         setMovies(data.results);
-        console.log(data.results);
+        // Fetch provider information for each movie
+        fetchProviderInfo(data.results);
       })
       .catch(error => console.error('Error fetching movies:', error));
   }, [filter]);
@@ -35,6 +36,7 @@ const MoviesList = () => {
             title={movie.title}
             overview={movie.overview}
             backdrop_path={movie.backdrop_path}
+            providers={movie.providers} // Pass providers as a prop to MovieCard
           />
         ))}
       </div>

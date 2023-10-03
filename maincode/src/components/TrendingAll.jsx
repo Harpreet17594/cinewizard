@@ -37,4 +37,3 @@ const trendingAll = () => {
 };
 
 export default trendingAll;
-
