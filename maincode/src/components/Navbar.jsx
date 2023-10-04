@@ -22,13 +22,8 @@ return(
         <Link to="/movies" className="nav-link">Movies</Link>
         <Link to="/tv-shows" className="nav-link">TV Shows</Link>
         <Link to="/watchlist" className="nav-link">WatchList</Link>
+        <Link to="/searchmovie" className="nav-link">Searchmovie</Link>
         <li className="nav-item dropdown">
-      
-        <form className="d-flex" role="search">
-      <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-      <button className="btn btn-outline-success" type="submit">Search</button>
-    </form>
-    
         </li>
       </ul>
     </div>

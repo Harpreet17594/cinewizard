@@ -4,10 +4,14 @@ import App from './App.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
+import { ChakraProvider } from '@chakra-ui/react'
+
 const root = document.getElementById('root'); // Get the root DOM element
 
 ReactDOM.createRoot(root).render(
   <React.StrictMode>
-    <App />
+    <ChakraProvider>
+      <App />
+    </ChakraProvider>
   </React.StrictMode>
 );

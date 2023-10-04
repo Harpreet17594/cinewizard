@@ -8,24 +8,11 @@ function Footer(){
         <>
         <div className="container-fluid bg-warning setsize">
             <div className="row">
-                <div className="col-lg-4">
-                <form>
-                    <span className="stylefont">Stay connected</span>
-                    <div className="input-group mb-3 setwidth">
-                    <span className="input-group-text" id="basic-addon1">@</span>
-                    <input type="text" className="form-control" placeholder="Email Address"  aria-label="Username" aria-describedby="basic-addon1"/>
-                   &nbsp;
-                    <button type="submit" className="btn btn-outline-success">Signup</button>
-                    </div>
-                    </form>
-                </div>
-                <div className="col-lg-4">
+                <div className="col-lg-12">
                     
-                </div>
-                <div className="col-lg-4">
-                    <br />
-                    <span className="stylefont">Copyright @Cinewizard</span>
-                    <img src={cinewizardlogo} alt="Loading Logo :)"  height={50} width={50}/>
+                    <img src={cinewizardlogo} alt="Loading Logo :)"  height={50} width={50} className="setmargin"/>
+                    <p className="stylefont">Copyright @Cinewizard</p>
+                    
                 </div>
 
             </div>

@@ -21,8 +21,9 @@ const trendingAll = () => {
 
   return (
     <div>
-      <h1>Trending Movies and TV Shows</h1>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <h2>Trending Movies and TV Shows</h2>
+      
+      <div className="movies-grid">
         {trending.map(item => (
           <MovieCard
             key={item.id}
