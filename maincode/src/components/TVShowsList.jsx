@@ -1,33 +1,40 @@
-// TVShowsList.jsx
 import React, { useState, useEffect } from 'react';
-import MovieCard from './MovieCard'; // Make sure to adjust the import path
+import MovieCard from './MovieCard';
+import TVShowFilter from './TVShowFilter';
+import './TVShowList.css';
 
 const TVShowsList = () => {
   const [tvShows, setTVShows] = useState([]);
+  const [filter, setFilter] = useState('popular');
 
   useEffect(() => {
     const API_KEY = 'b2ceb41d1b13c59c04358418f87cecae';
     const BASE_URL = 'https://api.themoviedb.org/3';
 
-    fetch(`${BASE_URL}/tv/popular?api_key=${API_KEY}`)
+    fetch(`${BASE_URL}/tv/${filter}?api_key=${API_KEY}`)
       .then(response => response.json())
       .then(data => {
         setTVShows(data.results);
         console.log(data.results);
       })
       .catch(error => console.error('Error fetching TV shows:', error));
-  }, []);
+  }, [filter]);
+
+  const handleFilterChange = (selectedFilter) => {
+    setFilter(selectedFilter);
+  };
 
   return (
-    <div>
-      <h1>Popular TV-Shows</h1>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-        {tvShows.map(item => (
+    <div className="tv-shows-container">
+      <h1>Popular TV Shows</h1>
+      <TVShowFilter onFilterChange={handleFilterChange} />
+      <div className="tv-shows-grid">
+        {tvShows.map(show => (
           <MovieCard
-            key={item.id}
-            title={item.title || item.name} // Title can be either "title" or "name" depending on the type
-            overview={item.overview}
-            backdrop_path={item.backdrop_path}
+            key={show.id}
+            title={show.name}
+            overview={show.overview}
+            backdrop_path={show.backdrop_path}
           />
         ))}
       </div>
