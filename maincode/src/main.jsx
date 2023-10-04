@@ -9,7 +9,7 @@ const root = document.getElementById('root'); // Get the root DOM element
 ReactDOM.createRoot(root).render(
   <React.StrictMode>
     <ChakraProvider>
-    <App />
+        <App />
     </ChakraProvider>
   </React.StrictMode>
 );

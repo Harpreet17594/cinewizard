@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import './movieCard.css';
 
 
@@ -22,7 +22,7 @@ const MovieCard = ({ title, overview ,backdrop_path}) => {
           <Typography variant="body2" color="text.secondary">
             {overview}
           </Typography>
-          <Button variant="contained">Show More..</Button>
+          {/* <Button variant="contained">Show More..</Button> */}
         </CardContent>
       </Card>
     );

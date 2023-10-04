@@ -23,10 +23,10 @@ const TrendingAll = () => {
 
   return (
     <div>
-      <h1>Trending Movies and TV Shows</h1>
+      <h2>Trending Movies and TV Shows</h2>
       <div className="movies-grid"> {/* Use the same class for consistency */}
         {trending.map(item => (
-          <div className="movie-grid" key={item.id}> {/* Apply movie-card class */}
+          <div className="movies-grid" key={item.id}> {/* Apply movie-card class */}
             <MovieCard
               title={item.title}
               overview={item.overview}
