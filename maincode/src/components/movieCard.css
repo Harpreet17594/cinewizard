@@ -1,11 +1,17 @@
-.movie-card {
+/* .movie-card {
     width: 250px;
     height: 150px;
     margin: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
+} */
+
+/* .movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+} */
 
 .stylecard{
     float: left;

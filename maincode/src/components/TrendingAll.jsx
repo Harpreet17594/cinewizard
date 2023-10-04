@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import MovieCard from './MovieCard'; // Make sure to adjust the import path
+import './movieCard.css'; // Import the CSS file with the card styles
 
-const trendingAll = () => {
+
+const TrendingAll = () => {
   const [trending, setTrending] = useState([]);
 
   useEffect(() => {
@@ -22,18 +24,19 @@ const trendingAll = () => {
   return (
     <div>
       <h1>Trending Movies and TV Shows</h1>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <div className="movies-grid"> {/* Use the same class for consistency */}
         {trending.map(item => (
-          <MovieCard
-            key={item.id}
-            title={item.title || item.name} // Title can be either "title" or "name" depending on the type
-            overview={item.overview}
-            backdrop_path={item.backdrop_path}
-          />
+          <div className="movie-grid" key={item.id}> {/* Apply movie-card class */}
+            <MovieCard
+              title={item.title}
+              overview={item.overview}
+              backdrop_path={item.backdrop_path}
+            />
+          </div>
         ))}
       </div>
     </div>
   );
 };
 
-export default trendingAll;
+export default TrendingAll;
