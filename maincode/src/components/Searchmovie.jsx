@@ -80,6 +80,7 @@ function Searchmovie() {
         size="md"
         htmlSize={50}
         width="auto"
+        
         id="query"
         value={searchValue}
         onChange={(e) => {

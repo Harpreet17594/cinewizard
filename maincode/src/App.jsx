@@ -12,6 +12,7 @@ import './App.css';
 
 function App() {
   return (
+    <div className="backgroundColor">
     <Router>
       <Navbar />
       <Hero />     
@@ -26,6 +27,7 @@ function App() {
       </Routes>
       <Footer />
     </Router>
+    </div>
   );
 }
 

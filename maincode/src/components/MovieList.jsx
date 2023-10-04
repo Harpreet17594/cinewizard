@@ -27,7 +27,7 @@ const MoviesList = () => {
 
   return (
     <div>
-      <h1>Popular Movies</h1>
+      <h2>Popular Movies</h2>
       <MovieFilter onFilterChange={handleFilterChange} />
       <div className="movies-grid">
         {movies.map(movie => (

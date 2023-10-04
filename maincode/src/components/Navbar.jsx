@@ -21,8 +21,6 @@ return(
         <Link to="/home" className="nav-link">Home</Link>
         <Link to="/movies" className="nav-link">Movies</Link>
         <Link to="/tv-shows" className="nav-link">TV Shows</Link>
-        <Link to="/watchlist" className="nav-link">WatchList</Link>
-
         <Link to="/searchmovie" className="nav-link">Searchmovie</Link>
 
         <li class="nav-item dropdown">

@@ -26,7 +26,7 @@ const TVShowsList = () => {
 
   return (
     <div className="tv-shows-container">
-      <h1>Popular TV Shows</h1>
+      <h2>Popular TV Shows</h2>
       <TVShowFilter onFilterChange={handleFilterChange} />
       <div className="tv-shows-grid">
         {tvShows.map(show => (
