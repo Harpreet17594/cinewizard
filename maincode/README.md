@@ -1,5 +1,5 @@
 # Cinewizard
-This design is a bootstrap design i have recreated my-portfolio design with bootstrap. You can see the webpage is fully responsive design also by clicking on the links you can nevigate to that particular section of the page. I have added all the information about me in the page .Footer section contains my contact details.
+The motivation for developing CineWizard is to create a user-friendly platform for movie and TV show enthusiasts. With the vast amount of content available today, users often struggle to find something to watch that matches their preferences. .
 ## Link to github repository
         https://github.com/Harpreet17594/cinewizard
 ## Link to Deployed application
